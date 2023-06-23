@@ -4,13 +4,13 @@ body{
     margin: 0;
     color: #fff;
     font-family: sans-serif;
-    background-color: #141414;
+    background-color: #ff7f00;
 }
 
 .card-list{
     display: flex;
     padding: 5em;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 .card-list::-webkit-scrollbar{
     width: 10px;
@@ -25,19 +25,20 @@ body{
     background: black;
 }
 
-.card{
+.card{    
     display: flex;
     position: relative;
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: 350px;
-    width: 300px;
+    width: 250px;
     min-width: 250px;
-    padding: 1.5rem;
-    
+    overflow: hidden;    
     border-radius: 1em;
-    background: #111;
-    box-shadow: -1rem 0 3rem #000 ;
+    background: #fff;
+    box-shadow: -1rem 0 2rem -8px #222 ;
     transition: 500ms;
+    justify-content: end;
+    align-items: center;
 }
 
 .card:hover{
@@ -50,3 +51,44 @@ body{
 .card:not(:first-child){
     margin-left: -130px;
 }
+
+.card-header{
+    height: 50%;
+    width: 100%;
+    background-color: #222;
+    clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-header p{
+    margin: 0;
+}
+
+.card-header h2{
+    margin: 0;
+    font-weight: 900;
+}
+
+.diamond{
+    height: 250px;
+    width: 180px;
+    background-color: orange;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(30px);
+}
+.shade{
+    background-image: url(https://images.unsplash.com/photo-1687182252183-58a905e7569a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160px;
+    width: 150px;
+    background-color: #fff;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+ 
